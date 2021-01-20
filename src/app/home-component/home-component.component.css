@@ -1,0 +1,21 @@
+.input-username {
+    position: absolute;
+
+    margin-top: 20%;
+    margin-inline-start: 43%;
+}
+
+.button-start {
+    position: absolute;
+
+    margin-top: 24%;
+    margin-inline-start: 45.5%;
+}
+
+.genderSelect {
+    position: absolute;
+
+    margin: 20%;
+
+    width: 70px;
+}

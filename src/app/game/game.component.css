@@ -1,0 +1,13 @@
+.RandomNumber {
+    font-size: 250px;
+
+    margin-top: 5%;
+    margin-inline-start: 22%;
+}
+
+.userInput {
+    position: fixed;
+
+    top: 50px;
+    left: 50px;;
+}

@@ -1,0 +1,57 @@
+<div>
+
+    <div class="form-start">
+
+        <form [formGroup]="basicDetailsForm" (ngSubmit)="onSubmit()">
+
+                <!-- <div class="row no-gutters">
+
+                    <div class="col-12 form-group">
+
+                        <label for="jobTitle">Job Title</label>
+
+                        <input formControlName="jobTitle" id="jobTitle" type="text" class="form-control col-8"  tooltip="This is the title displayed in your public job listing" placement="right">
+
+                        <div *ngIf="basicDetailsForm.controls.jobTitle.errors.pattern && basicDetailsForm.controls.jobTitle.touched">
+                            <label class="text-danger">{{errorMessages[0].pattern}}</label>
+                        </div>
+
+                        <div *ngIf="basicDetailsForm.controls.jobTitle.errors.required && basicDetailsForm.controls.jobTitle.touched">
+                            <label class="text-danger">{{errorMessages[0].required}}</label>
+                        </div>
+
+                        <div *ngIf="basicDetailsForm.controls.jobTitle.errors.maxlength && basicDetailsForm.controls.jobTitle.touched">
+                            <label class="text-danger">{{errorMessages[0].maxLength}}</label>
+                        </div>
+
+                    </div>
+
+                </div> -->
+
+                <button>click</button>
+    
+                <div class="col-4  form-group">
+                        <label for="minimumSalary">From</label>
+                        <input formControlName="minimumSalary" id="minimumSalary" type="number" class="form-control">
+                        <p *ngFor="let validation of validationMessages.minimumSalary">
+                            <label class="text-danger" for="minimumSalary" *ngIf="basicDetailsForm.hasError(validation.type) && true">{{validation.message}}</label>
+                        </p>
+                    </div>
+                    <div class="col-4 form-group">
+                        <label for="maximumSalary">To</label>
+                        <input formControlName="maximumSalary" id="maximumSalary" type="number" class="form-control"c>
+                        <p *ngFor="let validation of validationMessages.maximumSalary">
+                            <label class="text-danger" for="maximumSalary" *ngIf="basicDetailsForm.hasError(validation.type) && true">{{validation.message}}</label>
+                        </p>
+                    </div>
+    
+            </form>
+    </div>
+
+    <div>
+
+        <app-leader-boards></app-leader-boards>
+
+    </div>
+    
+</div>

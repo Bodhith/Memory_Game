@@ -1,0 +1,18 @@
+<div>
+    <div>
+        <p class="RandomNumber" *ngIf="showRandomNumber"> {{randomNumber}} </p>
+    </div>
+    <div class="userInput">
+        <form (submit)="checkAnswer()">
+            <input type="text" [(ngModel)]="userAnswer" name="userGuess">
+            <button type="submit">Submit</button>
+        </form>
+        <div>
+            <p>{{status}}</p>
+        </div>
+        <div>
+            <h4>Total Correct: {{totalCorrect}}</h4>
+            <h4>Total Wrong: {{totalWrong}}</h4>
+        </div>
+    </div>
+</div>
